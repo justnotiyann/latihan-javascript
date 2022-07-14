@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Latihan 1</title>
+    <script type="script.js"></script>
+</head>
+<body>
+
+    <img id="paragraf" class="text-info text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi, nobis.</img>
+
+    <p id="tulisan" class="text-warning">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, dolorem!</p>
+    <!-- <button onclick=ubahwarna() id="button">Klik me</button> -->
+
+
+    <!-- ATTRIBUTE -->
+    <script>
+
+            
+    // const fotoku = document.getElementById("fotoku")
+    // console.info(fotoku)
+
+
+    // const gambar = document.getElementById("foto")
+    // console.info(gambar)
+
+    // gambar.setAttribute("src", "www.google.com")
+    // gambar.setAttribute("alt", "www.google.com")
+    
+    // Untuk bootstrap Cocok ini !
+
+
+    // const tulisan = document.getElementById("tulisan")
+    // console.info("tulisan")
+        
+    // tulisan.setAttribute("class", "text-info fs-3 fw-bold text-center")
+
+    // const button = document.getElementById("button")
+    // const ubahwarna = function() {
+    //     paragraf.setAttribute("class", "active fs-3 fw-bold text-center")
+    //     button.setAttribute("class", "btn btn-primary rounded-pill")
+    // }
+    </script>
+    <!-- END OF ATTRIBUTE -->
+
+    <!-- NAMED NODE MAP -->
+    <script>
+        // const tulisan = document.getElementById("paragraf")
+        // const attributes = tulisan.attributes
+
+
+        // for (const attribut of attributes) {
+        //     console.info(`${attribut.name}, ${attribut.value}`)
+            
+        // }
+
+        const tulisan = document.getElementById("tulisan")
+        // console.info(tulisan)
+
+        const attribut = tulisan.attributes
+        for (const kumpulanattribute of attribut) {
+            console.info(`Ini adalah property : ${kumpulanattribute.name}, dan ini adalah value :${kumpulanattribute.value}`)
+        }
+
+
+    </script>
+    <!-- END OF NAMED NODE MAP -->
+</body>
+</html>

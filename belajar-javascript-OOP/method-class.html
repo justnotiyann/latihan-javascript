@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method Class</title>
+</head>
+<body>
+    <script>
+
+    class Person{
+        constructor(name){
+            alert(`Hello ${name}, Ini adalah pesan dari constructor`)
+        }
+
+        sayBye(nama){
+            confirm(`Hello ${nama},Ini adalah pesan dari sayBye Function`)
+        }
+    } 
+
+    const Nabila = new Person("Nabila")
+    Nabila.sayBye("Nabila")
+    console.info(Nabila)
+
+
+    </script>
+</body>
+</html>

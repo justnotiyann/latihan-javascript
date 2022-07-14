@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Method Class</title>
+</head>
+<body>
+    <script>
+
+    // Mencopy Function Class satu kedalam class yang berbeda
+
+    // Class 1
+    class Shape{
+        paint(){
+            console.info("Paint Shape")
+        }
+
+        sayHello(){
+            console.info("Hello ini dari Class Shape")
+        }
+
+        sayBye(){
+            console.info("Sayonara ini dari Class Shape")
+        }
+    }
+
+    // Class 2
+    class Circle extends Shape{
+        paint(){
+            super.paint()
+            super.sayHello()
+            super.sayBye()
+            console.info("Ini dari class circle 2")
+            return;
+        }
+    
+    }
+
+
+    // Ouput
+    const circle = new Circle();
+    circle.paint()
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

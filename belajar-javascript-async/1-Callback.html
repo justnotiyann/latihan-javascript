@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Callback</title>
+</head>
+
+<body>
+    <h4 id="header"></h4>
+    <script>
+        // Ada beberapa Method untuk membuat Async dalam latihan kali ini kita akan membahas 2 yakni
+        // setTimeout(callbacl,timeInMillis) | Dipanggil Sekali
+        // SetInterval(callbacl,timeInMillis) => timeInMilis contohnya 5000 detik = 5 Detik | Dipanggil berkali-kali
+
+        // setTimeout Async Method
+
+        const addElement = () => {
+            const header = document.createElement("h1");
+            header.textContent = "Halo ini dari Javascript Async Method"
+            document.body.appendChild(header);
+        };
+
+        setTimeout(addElement, 2000);
+        console.info("Program Selesai");
+
+
+        // setInterval
+
+        const header = () => {
+            const header = document.getElementById("header")
+            header.textContent = new Date().toString();
+        };
+        
+
+        setInterval(header,1000)
+        console.info("Program Selesai dari Function setInterval")
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Instances</title>
+</head>
+<body>
+    <script>
+
+// Hitung Nilai
+        function hitungNilai(nilai){
+            if (nilai >= 90){
+                console.info("Anda Hebat 90")
+            } else if (nilai >= 80) {
+                console.info("Anda Great 80")
+            } else if (nilai >= 70) {
+                console.info("Great 70")
+            } else {
+                console.info("Maaf anda tidak lulus ")
+            }
+        } 
+
+        hitungNilai(90);
+        hitungNilai(70);
+        hitungNilai(60);
+
+// Ganjil Genap
+
+        function ganjilGenap(value){
+            if (value % 2 == 0){
+                console.info("Ini bilangan genap")
+            } else {
+                console.info("Ini bilangan ganjil")
+            }
+        }
+
+        ganjilGenap(10);
+        ganjilGenap(21);
+        ganjilGenap(3)
+
+// Fizz Buzz
+        function fizzBuzz(angka){
+            if (angka % 3 == 0 && angka % 5 == 0 ){
+                console.info("Fizz Buzz")
+            } else if (angka % 3 == 0){
+                console.info("fizz")
+            } else if ( angka % 5 == 0 ){
+                console.info("buzz")
+            } else {
+                console.info("ini bukan fizzbuzz")
+            }
+        }
+        
+        fizzBuzz(6);
+        fizzBuzz(5);
+        fizzBuzz(15);
+
+// Fizz Bzz dengan melakukan perulangan
+        for (let i = 0; i <= 10 ; i++) {
+            if (i % 3 == 0 && i % 5 == 0 ){
+                console.info("Fizz Buzz")
+            } else if (i % 3 == 0){
+                console.info("fizz")
+            } else if ( i % 5 == 0 ){
+                console.info("buzz")
+            } else {
+                console.info("ini bukan fizzbuzz")
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>

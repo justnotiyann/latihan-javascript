@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membuat Class Error</title>
+</head>
+<body>
+    <script>
+        alert("Ini adalah materi yang digunakan untuk membuat custom eror")
+
+        // Membuat custom eror dari parent class Error
+        class ValidationError extends Error {
+            constructor(message,field){
+                super(message);
+                this.field = field;
+            }
+        }
+
+
+        /// Static juga bisa digunakan untuk method/function
+        class MathUtil{
+            static sum(...numbers){
+                // Edit kata eror menggunakan kata kunci throw
+                if(numbers.length === 0 ){
+                    throw new ValidationError ("harap isikan parameternya","Isikan Parameternya dengan angka dan jangan dikosongkan")
+                }
+
+
+
+                let total = 0;
+                for (const number in numbers ){
+                    total += number;
+                };
+                return total;
+            };
+        };
+
+        // Menggunakan kata kunci try dan eror
+        // Kata kunci try digunakan untuk mengakses kode program yang menyebabkan eror
+        // apabila eror maka akan otomatis memasuki blok catch dan disini kita bisa mengkreasikan apa yang akan kita buat saat eror 
+        try {
+            console.info(MathUtil.sum(10,11,10,10));
+            console.info("Console ini berada didalam block try")
+        } catch (error){
+            if (error instanceof ValidationError){
+                alert(`Terjadi error di field ${error.field} dengan eror ${error.message}`)
+            } else {
+                alert(`Terjadi eror ${eror.message}`)
+            }
+        };
+
+    </script>
+</body>
+</html>

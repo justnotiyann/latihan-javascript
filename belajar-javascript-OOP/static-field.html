@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Field</title>
+</head>
+<body>
+    <script>
+        class Configuration{
+            static name = "Belajar Javascript OOP";
+            static version = "1.0";
+            static author = "Muhammad Fitrian"
+        };
+
+        // Property tersebut hanya milik Parentnya saja dan tidak bisa diakses melalui child nya
+        const person = new Configuration();
+        console.info(person)
+
+        // Apabila ingin mengakses kita perlu memanggil si pemilik class(parentnya)
+
+        console.info(Configuration);
+        console.info(Configuration.name);
+        console.info(Configuration.version);
+        console.info(Configuration.author);
+
+
+        // Apabila ingin mengubah bisa langsung
+
+        Configuration.name = "Eko Kurniawan"
+        console.info(Configuration.name);
+
+    </script>
+</body>
+</html>

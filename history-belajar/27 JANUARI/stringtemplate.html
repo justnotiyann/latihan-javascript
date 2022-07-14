@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STRING TEMPLATE</title>
+  </head>
+  <body>
+    <script>
+      // Belajar String Template, Jadi bisa memanggil variabel langsung kedalam string tanpa harus menggunakan plus lagi.
+      // Kalo Javascript untuk memanggil variabel kedalam string perlu format khusus yakni menggunakan backtick (`)
+      // Lalu untuk memanggil nama variabel kita perlu menggunakan format ${nama_variabel}
+      const fullName = "Muhammad Fitrian Shousyade Almadina";
+      const lengkap = `Nama Mahasiswa : ${fullName}`;
+
+      console.info(lengkap);
+
+      // Expression di String Template (Percabangan)
+
+      const nama = "Muhammad Fitrian Shousyade Almadina";
+      const nilai = 80;
+      const lulus = nilai > 75;
+      const template = `Nama : ${nama} Dengan Nilai ${nilai} dinyatakan ${lulus}`;
+
+      console.info(template);
+    </script>
+  </body>
+</html>

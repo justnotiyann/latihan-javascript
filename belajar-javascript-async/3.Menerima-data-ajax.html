@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menerima Data AJAX</title>
+</head>
+<body>
+    <h1 id="header"></h1>
+    
+
+    <script>
+        // Pertama Bikin variabel Ajax dulu
+        const ajax = new XMLHttpRequest();
+
+        // Lalu panggil file ajax nya
+        ajax.open("GET","api/hello.json")
+
+        // Lalu apabila ingin menerima data kita bisa menggunakan eventlistener disertai function sebagai parameter selanjutnya
+        ajax.addEventListener("load",function(){
+            
+            // Kemudian buat variabel json untuk menampung data dari text ke json
+
+            const json = JSON.parse(ajax.responseText);
+
+            // Kemudian kita tangkap elemen mana tempat yang ingin kita taruh nilainya, disini kita menggunaka h1 dengan id header
+
+            const header = document.getElementById("header")
+            // Lalu tambahkan kedalam valuenya
+            header.textContent = json.Sukses; // Sesuai dengan value didalam json nya
+        });
+
+        // Kita panggil menggunakan method
+        ajax.send();
+        
+    </script>
+</body>
+</html>

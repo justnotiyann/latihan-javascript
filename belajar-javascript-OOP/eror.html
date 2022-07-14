@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eror</title>
+</head>
+<body>
+    <script>
+        
+        /// Static juga bisa digunakan untuk method/function
+        class MathUtil{
+            static sum(...numbers){
+                // Edit kata eror 
+                if(numbers.length === 0 ){
+                    throw new Error ("Isikan parameternya woi")
+                }
+
+
+
+                let total = 0;
+                for (const number in numbers ){
+                    total += number;
+                };
+                return total;
+            };
+        };
+
+        // Cara aksesnya pun sama seperti static
+
+        const sum = MathUtil.sum(1,23,124,415,2,4,542,);
+        console.info(sum)
+
+        // /// Edit kata eror
+        // const total = MathUtil.sum();
+        // console.info(total);
+
+        // eror
+        console.log(MathUtil.sum())
+
+    </script>
+</body>
+</html>

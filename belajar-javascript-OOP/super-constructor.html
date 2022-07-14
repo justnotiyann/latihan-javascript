@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Contructor</title>
+</head>
+<body>
+    <script>    
+        
+    // Pembuatan Class
+    
+    class Employee{
+        constructor(firstName){
+            this.firstName = firstName
+        }
+    }
+
+    class Manager extends Employee{
+        constructor(firstName,lastName){
+            super(firstName);
+            this.lastName = lastName
+        }
+    }
+
+    class Principle extends Manager{
+        constructor(firstName,lastName,middleName){
+            super(firstName,lastName);
+            this.middleName = middleName
+        }
+    }
+
+
+    // Deklarasi Variabel
+    
+    const budi = new Employee("budi")
+    console.info(budi)
+
+    const iyan = new Manager("Muhammad","Fitrian")
+    console.info(iyan)
+
+    const Raharjo = new Principle("Budi","Ahmad","Rahrjo")
+    console.info(Raharjo)
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+
+
+    </script>
+</body>
+</html>

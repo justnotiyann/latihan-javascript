@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Field</title>
+</head>
+<body>
+    <script>
+        
+        // Static juga bisa digunakan untuk method/function
+        class MathUtil{
+            static sum(...numbers){
+                let total = 0;
+                for (const number in numbers ){
+                    total += number;
+                };
+                return total;
+            };
+        };
+
+        // Cara aksesnya pun sama seperti static
+
+        const sum = MathUtil.sum(1,23,124,415,2,4,542,);
+        console.info(sum)
+
+    </script>
+</body>
+</html>

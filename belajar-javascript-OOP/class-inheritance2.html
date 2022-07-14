@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Inheritance2</title>
+</head>
+<body>
+    <script>
+        class Employee {
+
+            constructor(nilaiUjian){
+                nilaiUjian = parseInt(prompt("Masukkan Nilai Anda | ini dari Class Employee"))
+                if (nilaiUjian >= 90){
+                    console.info("Anda lulus")
+                } else {
+                    console.info("Anda Tidak lulus")
+                }
+            };
+        };
+
+        // Sifat Penurunan dari Class Menggunakan kata kunci extends
+        class Manager extends Employee {
+
+        }
+
+        const budi = new Employee(100);
+        console.info(budi)
+
+        const iyan = new Manager()
+        console.info(iyan)
+    </script>
+</body>
+</html>

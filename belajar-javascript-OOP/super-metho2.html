@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Method 2</title>
+</head>
+<body>
+    <script>
+        class Parent {
+            constructor(mother,father,children){
+                this.mother = mother;
+                this.father = father;
+                this.children = children;
+            };
+            sayFamily(name){
+                console.info(`Hello ${name}, Salam dari ${this.mother} dan ${this.father} ${this.children}`)
+            };
+        };
+
+        class Children extends Parent {
+            constructor(mother,father,children){
+                super(mother,father,children)
+            }
+
+            sayFams(name){
+                super.sayFamily(name);
+            }
+            // sayFams(){
+            //     super.sayFamily();
+            // };
+        };
+
+        const orangTua = new Parent("Ibu","ayah","anak");
+        orangTua.sayFamily("Budi")
+        console.info(orangTua)
+
+        const anakKecil = new Children("Anak","kecil","bangsawan");
+        anakKecil.sayFams("Cekibrot");
+        console.info(anakKecil)        
+
+    </script>
+</body>
+</html>
